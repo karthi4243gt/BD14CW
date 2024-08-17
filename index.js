@@ -9,9 +9,6 @@ app.listen(port, () => {
   console.log("Server running on port " + port);
 });
 
-directory
-app.use(express.static("public"));
-
 // Define a route for the home page
 app.get("/", (req, res) => {
   res.send(`
