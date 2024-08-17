@@ -9,6 +9,12 @@ app.listen(port, () => {
   console.log("Server running on port " + port);
 });
 
+app.get("/", (req, res) => {
+  res.send(
+    "Please enter the API parameter to get the desired output => BD_1.4_CW",
+  );
+});
+
 // Create an endpoint that returns a welcome message.
 function getWelcomeMessage() {
   return "Welcome to our service!";
