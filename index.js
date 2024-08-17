@@ -29,6 +29,10 @@ app.get("/", (req, res) => {
     </body>
     </html>
   `);
+}); 
+
+app.get("/test", (req, res) => {
+  res.send("Hello World");
 });
 
 /*// Serve static files (like CSS, images, etc.) from the "public" directory
