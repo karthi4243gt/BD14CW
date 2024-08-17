@@ -29,7 +29,7 @@ function getGreetingMessage(username) {
   return "Hello, " + username + "!";
 }
 
-app.get("/greett", (request, response) => {
+app.get("/greet", (request, response) => {
   let username = request.query.username;
   response.send(getGreetingMessage(username));
 });
