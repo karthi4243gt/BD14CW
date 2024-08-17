@@ -31,8 +31,8 @@ app.get("/", (req, res) => {
   `);
 }); 
 
-app.get("/test", (req, res) => {
-  res.send("Hello World");
+app.get("/", (req, res) => {
+  res.send("Hello I'm soldier Boy");
 });
 
 /*// Serve static files (like CSS, images, etc.) from the "public" directory
