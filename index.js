@@ -6,20 +6,27 @@ app.listen(port, () => {
   console.log("Server running on port " + port);
 });
 
-function generateCertificate(firstName, lastName, courseName) {
-  let result =
-    "This certification is awarded to " +
-    firstName +
-    " " +
-    lastName +
-    " for completing course " +
-    courseName;
-  return result;
-}
+directory
+app.use(express.static("public"));
 
-app.get("/certificate", (request, response) => {
-  let firstName = request.query.firstName;
-  let lastName = request.query.lastName;
-  let courseName = request.query.courseName;
-  response.send(generateCertificate(firstName, lastName, courseName));
+// Define a route for the home page
+app.get("/", (req, res) => {
+  res.send(`
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Simple Web Page</title>
+      <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding-top: 50px; }
+        h1 { color: #333; }
+      </style>
+    </head>
+    <body>
+      <h1>Welcome to My Simple Web Page</h1>
+      <p>This is a simple web page built with Express.js</p>
+    </body>
+    </html>
+  `);
 });
